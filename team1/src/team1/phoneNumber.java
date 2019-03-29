@@ -47,45 +47,27 @@ public class PhoneNumber extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
-=======
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(107, Short.MAX_VALUE)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(95, 95, 95))
->>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
             .addGroup(layout.createSequentialGroup()
                 .addGap(138, 138, 138)
                 .addComponent(jButton2)
                 .addGap(42, 42, 42)
                 .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-<<<<<<< HEAD
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(107, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(95, 95, 95))
-=======
->>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-<<<<<<< HEAD
-                .addGap(79, 79, 79)
-=======
                 .addGap(95, 95, 95)
->>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-<<<<<<< HEAD
-                .addContainerGap(123, Short.MAX_VALUE))
-=======
                 .addContainerGap(107, Short.MAX_VALUE))
->>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
         );
 
         pack();
@@ -122,15 +104,12 @@ public class PhoneNumber extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-<<<<<<< HEAD
-=======
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
->>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
