@@ -10,7 +10,7 @@ package team1;
  * @author ibrahim
  */
 public class Order extends javax.swing.JFrame {
-
+int x;
     /**
      * Creates new form phoneNumber
      */
