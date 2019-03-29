@@ -27,6 +27,10 @@ int x;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+=======
         jCheckBox2 = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -222,10 +226,18 @@ int x;
             }
         });
 
+>>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+=======
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -308,11 +320,14 @@ int x;
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+>>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
+=======
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -333,6 +348,7 @@ int x;
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField14ActionPerformed
 
+>>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
     /**
      * @param args the command line arguments
      */
@@ -360,6 +376,11 @@ int x;
         }
         //</editor-fold>
         //</editor-fold>
+<<<<<<< HEAD
+        //</editor-fold>
+        //</editor-fold>
+=======
+>>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -370,6 +391,8 @@ int x;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
+=======
     private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel1;
@@ -401,5 +424,6 @@ int x;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+>>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
     // End of variables declaration//GEN-END:variables
 }

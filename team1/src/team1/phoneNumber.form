@@ -23,31 +23,51 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
+          <Group type="102" alignment="0" attributes="0">
+=======
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace pref="107" max="32767" attributes="0"/>
               <Component id="jTextField1" min="-2" pref="198" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
+>>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
               <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
               <Component id="jButton2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
+<<<<<<< HEAD
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="107" max="32767" attributes="0"/>
+              <Component id="jTextField1" min="-2" pref="198" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+          </Group>
+=======
+>>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
+              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+=======
               <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+>>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
               <Component id="jTextField1" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+<<<<<<< HEAD
+              <EmptySpace pref="123" max="32767" attributes="0"/>
+=======
               <EmptySpace pref="107" max="32767" attributes="0"/>
+>>>>>>> 7caa636cb3507ce1bca07598d6cf530c17c667da
           </Group>
       </Group>
     </DimensionLayout>
