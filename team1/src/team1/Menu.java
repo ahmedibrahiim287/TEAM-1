@@ -668,7 +668,7 @@ public class Menu extends javax.swing.JFrame {
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
-<<<<<<< HEAD
+
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     jLabel12.setText("");
@@ -740,8 +740,7 @@ jCheckBox1.isSelected();
                                            
     }//GEN-LAST:event_jButton22ActionPerformed
 
-=======
->>>>>>> c47f6e9a3dbf18c1f4abe08a95325938659c8771
+
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
          this.dispose();
