@@ -10,7 +10,19 @@ package team1;
  * @author ibrahim
  */
 public class Order extends javax.swing.JFrame {
-int x;
+String x;
+String f;
+String d;
+String a;
+String n;
+String t6;
+String t7;
+String t8;
+String t9;
+String t11;
+String tp;
+String no;
+
     /**
      * Creates new form phoneNumber
      */
@@ -76,6 +88,12 @@ int x;
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
+            }
+        });
+
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
             }
         });
 
@@ -315,6 +333,9 @@ int x;
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
+         
+          
+                
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -326,12 +347,29 @@ int x;
     }//GEN-LAST:event_jTextField12ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
         // TODO add your handling code here:
+        x=jTextField1.getText();
+        f=jTextField13.getText();
+        d=jTextField14.getText();
+        a=jTextField12.getText();
+        n=jTextField5.getText();
+        t6=jTextField6.getText();
+        t7=jTextField7.getText();
+        t8=jTextField8.getText();
+        t9=jTextField9.getText();
+        t11=jTextField11.getText();
+        tp=jTextField12.getText();
+        no=jTextField13.getText();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField14ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
 
     /**
      * @param args the command line arguments
