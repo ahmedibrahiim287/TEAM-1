@@ -5,17 +5,23 @@
  */
 package team1;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ibrahim
  */
 public class PhoneNumber extends javax.swing.JFrame {
-
+Connection conn=null;
     /**
      * Creates new form Order
      */
     public PhoneNumber() {
         initComponents();
+    this.setLocationRelativeTo(null);
+    conn=connection.getCONNECTION();
     }
 
     /**
@@ -97,6 +103,16 @@ public class PhoneNumber extends javax.swing.JFrame {
          this.dispose();
         Customer german = new Customer();
         german.setVisible(true);
+        String v=jTextField1.getText();
+        try{
+        String sql="INSERT INTO `phone numbers-` (`Phone`) VALUES ('"+v+"')";
+        PreparedStatement pst=conn.prepareStatement(sql);
+        
+        pst.execute();
+        JOptionPane.showMessageDialog(null,"done");
+  }
+        catch(Exception e){        JOptionPane.showMessageDialog(null,e);
+}
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
