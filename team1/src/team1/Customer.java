@@ -47,14 +47,13 @@ public class Customer extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         conn=connection.getCONNECTION();
-update_table();
     }
 private void update_table() {
       try{
           String sql ="select * from resturant";
-          pst=con.prepareStatement(sql);
+          pst=conn.prepareStatement(sql);
           rs=pst.executeQuery();
-          resturant_table.setModel(DbUtils.resultSetToTableModel(rs));
+          //resturant_table.setModel(DbUtils.resultSetToTableModel(rs));
       }
       catch(Exception e){
           JOptionPane.showMessageDialog(null, e);
@@ -64,7 +63,7 @@ private void update_table() {
 
 
 //To change body of generated methods, choose Tools | Templates.
-    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
