@@ -105,7 +105,7 @@ Connection conn=null;
         german.setVisible(true);
         String v=jTextField1.getText();
         try{
-        String sql="INSERT INTO `phone numbers-` (`Phone`) VALUES ('"+v+"')";
+        String sql="INSERT INTO `clients data` (`Phone Number`) VALUES ('"+v+"')";
         PreparedStatement pst=conn.prepareStatement(sql);
         
         pst.execute();

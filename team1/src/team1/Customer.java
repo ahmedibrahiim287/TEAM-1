@@ -5,6 +5,10 @@
  */
 package team1;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ibrahim
@@ -15,6 +19,7 @@ public class Customer extends javax.swing.JFrame {
      * Creates new form Customer
      * 
      */
+    Connection conn=null;
     String fullname ;
       String phone ;
        String c ;
@@ -22,8 +27,12 @@ public class Customer extends javax.swing.JFrame {
        String lastorder;
        String dep;
        String floor ;
+    private String EMAIL;
     public Customer() {
         initComponents();
+        this.setLocationRelativeTo(null);
+conn=connection.getCONNECTION();
+
     }
 
     /**
@@ -165,17 +174,17 @@ public class Customer extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGap(393, 393, 393)
+                                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGap(11, 11, 11)
                                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE))))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(499, 499, 499)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(459, 459, 459)
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
@@ -224,9 +233,9 @@ public class Customer extends javax.swing.JFrame {
                             .addComponent(jLabel3)
                             .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -255,10 +264,28 @@ public class Customer extends javax.swing.JFrame {
         address=jTextField3.getText();
         lastorder=jTextField4.getText();
         dep=jTextField5.getText();
-        floor =jTextField5.getText();
+        floor =jComboBox1.getActionCommand();
+        EMAIL=jTextField6.getText();
+         String v1=jTextField1.getText();
+          String v2=jTextField2.getText();
+           String v3=jTextField3.getText();
+            String v4=jTextField5.getText();
+            String v5=jTextField6.getText();
+             String v6=jComboBox1.getActionCommand();
         this.dispose();
         Menu german = new Menu();
         german.setVisible(true);
+        
+        
+        try{
+        String sql="INSERT INTO `clients data` (`Name`,`Phone Number`,`E-mail`,`Address`,`Departement`,`Floor`) VALUES ('"+v1+"','"+v2+"','"+v5+"','"+v3+"','"+v4+"','"+v6+"')";
+        PreparedStatement pst=conn.prepareStatement(sql);
+        
+        pst.execute();
+        JOptionPane.showMessageDialog(null,"done");
+  }
+        catch(Exception e){        JOptionPane.showMessageDialog(null,e);
+}
         
                 
                 
