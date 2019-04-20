@@ -9,7 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
-import net.proteanit.sql.DbUtils;
+//import net.proteanit.sql.DbUtils;
 
 /**
  *
@@ -40,7 +40,7 @@ public class Customer extends javax.swing.JFrame {
         phone = x;
         jTextField2.setText(phone);
         update_table();
-        
+        load ();
     }
 
     private Customer() {
@@ -53,12 +53,37 @@ private void update_table() {
           String sql ="select * from resturant";
           pst=conn.prepareStatement(sql);
           rs=pst.executeQuery();
-          resturant_table.setModel(DbUtils.resultSetToTableModel(rs));
+          
       }
       catch(Exception e){
           JOptionPane.showMessageDialog(null, e);
       }
       }
+private void load (){
+try{
+    String sql="select * from resturant where Phone Number='"+phone+"'";
+pst=conn.prepareStatement(sql);
+rs=pst.executeQuery();
+if(rs.next()){
+   
+     String add2=rs.getString("fullname");
+    jTextField1.setText(add2); 
+   String add3=rs.getString("Email");
+    jTextField6.setText(add3);
+     String add4=rs.getString("Address");
+    jTextField3.setText(add4);
+    String add5=rs.getString("Departement");
+    jTextField5.setText(add5);
+    
+    //String add6=rs.getString("Floor");
+    //Floor_txt.setText(add6);
+    
+ }
+}
+catch(Exception e){
+    JOptionPane.showMessageDialog(null, e);
+}
+}
 
 
 
@@ -318,32 +343,6 @@ private void update_table() {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
-try{
-    String sql="select * from resturant where Phone Number='"+phone+"'";
-pst=conn.prepareStatement(sql);
-rs=pst.executeQuery();
-if(rs.next()){
-   
-     String add2=rs.getString("fullname");
-   fullname_txt.setText(add2); 
-   String add3=rs.getString("Email");
-    Email_txt.setText(add3);
-     String add4=rs.getString("Address");
-    Address_txt.setText(add4);
-    String add5=rs.getString("Departement");
-    Departement_txt.setText(add5);
-    
-    String add6=rs.getString("Floor");
-    Floor_txt.setText(add6);
-    
- }
-}
-catch(Exception e){
-    JOptionPane.showMessageDialog(null, e);
-}
-}
-
-
         // TODO add your handling code here:
     }//GEN-LAST:event_formMouseClicked
 
