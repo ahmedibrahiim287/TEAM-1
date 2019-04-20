@@ -39,7 +39,7 @@ public class Customer extends javax.swing.JFrame {
         
         phone = x;
         jTextField2.setText(phone);
-        update_table();
+       
         load ();
     }
 
@@ -48,17 +48,7 @@ public class Customer extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         conn=connection.getCONNECTION();
     }
-private void update_table() {
-      try{
-          String sql ="select * from clients data";
-          pst=conn.prepareStatement(sql);
-          rs=pst.executeQuery();
-          
-      }
-      catch(Exception e){
-          JOptionPane.showMessageDialog(null, e);
-      }
-      }
+
 private void load (){
 try{
     String sql="select * from clientsdata where PhoneNumber='"+phone+"'";
@@ -81,7 +71,7 @@ if(rs.next()){
  }
 }
 catch(Exception e){
-   
+    JOptionPane.showMessageDialog(null, e);
 }
 }
 
@@ -309,7 +299,7 @@ catch(Exception e){
         
         
         try{
-        String sql="INSERT INTO `clients data` (`Name`,`PhoneNumber`,`E-mail`,`Address`,`Departement`,`Floor`) VALUES ('"+v1+"','"+v2+"','"+v5+"','"+v3+"','"+v4+"','"+v6+"')";
+        String sql="INSERT INTO `clientsdata` (`Name`,`PhoneNumber`,`Email`,`Address`,`Departement`,`Floor`) VALUES ('"+v1+"','"+v2+"','"+v5+"','"+v3+"','"+v4+"','"+v6+"')";
         PreparedStatement pst=conn.prepareStatement(sql);
         
         pst.execute();
