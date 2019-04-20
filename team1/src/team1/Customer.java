@@ -28,10 +28,20 @@ public class Customer extends javax.swing.JFrame {
        String dep;
        String floor ;
     private String EMAIL;
-    public Customer() {
+    public Customer(String x) {
         initComponents();
         this.setLocationRelativeTo(null);
-conn=connection.getCONNECTION();
+        conn=connection.getCONNECTION();
+        phone = x;
+        jTextField2.setText(phone);
+        
+        
+    }
+
+    private Customer() {
+        initComponents();
+        this.setLocationRelativeTo(null);
+        conn=connection.getCONNECTION();
 
     }
 
@@ -348,6 +358,7 @@ conn=connection.getCONNECTION();
                 new Customer().setVisible(true);
             }
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
