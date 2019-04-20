@@ -50,7 +50,7 @@ public class Customer extends javax.swing.JFrame {
     }
 private void update_table() {
       try{
-          String sql ="select * from resturant";
+          String sql ="select * from clients data";
           pst=conn.prepareStatement(sql);
           rs=pst.executeQuery();
           
@@ -61,12 +61,12 @@ private void update_table() {
       }
 private void load (){
 try{
-    String sql="select * from resturant where Phone Number='"+phone+"'";
+    String sql="select * from clientsdata where PhoneNumber='"+phone+"'";
 pst=conn.prepareStatement(sql);
 rs=pst.executeQuery();
 if(rs.next()){
    
-     String add2=rs.getString("fullname");
+     String add2=rs.getString("Name");
     jTextField1.setText(add2); 
    String add3=rs.getString("Email");
     jTextField6.setText(add3);
@@ -81,7 +81,7 @@ if(rs.next()){
  }
 }
 catch(Exception e){
-    JOptionPane.showMessageDialog(null, e);
+   
 }
 }
 
@@ -309,7 +309,7 @@ catch(Exception e){
         
         
         try{
-        String sql="INSERT INTO `clients data` (`Name`,`Phone Number`,`E-mail`,`Address`,`Departement`,`Floor`) VALUES ('"+v1+"','"+v2+"','"+v5+"','"+v3+"','"+v4+"','"+v6+"')";
+        String sql="INSERT INTO `clients data` (`Name`,`PhoneNumber`,`E-mail`,`Address`,`Departement`,`Floor`) VALUES ('"+v1+"','"+v2+"','"+v5+"','"+v3+"','"+v4+"','"+v6+"')";
         PreparedStatement pst=conn.prepareStatement(sql);
         
         pst.execute();

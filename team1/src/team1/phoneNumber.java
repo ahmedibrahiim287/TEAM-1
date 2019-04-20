@@ -104,7 +104,7 @@ Connection conn=null;
         nextframe.setVisible(true);
         String v=jTextField1.getText();
         try{
-        String sql="INSERT INTO `clients data` (`Phone Number`) VALUES ('"+v+"')";
+        String sql="INSERT INTO `clientsdata` (`PhoneNumber`) VALUES ('"+v+"')";
         PreparedStatement pst=conn.prepareStatement(sql);
         
         pst.execute();
