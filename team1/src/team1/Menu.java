@@ -505,9 +505,9 @@ conn=connection.getCONNECTION();
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -566,9 +566,6 @@ conn=connection.getCONNECTION();
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(73, 73, 73)
@@ -578,7 +575,9 @@ conn=connection.getCONNECTION();
                                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(33, 33, 33)
                                         .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(0, 65, Short.MAX_VALUE))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel13))))
@@ -682,16 +681,6 @@ conn=connection.getCONNECTION();
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox5ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      double  total = mi+tw+ch+zi+ch1+fi+ba+pe+up;
-      if(jCheckBox1.isSelected()
-){      total = mi+tw+ch+zi+ch1+fi+ba+pe+up+10; 
-      }
-     
-       jTextField1.setText(String.valueOf(total));
-       
-    }//GEN-LAST:event_jButton1ActionPerformed
-
 
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -783,7 +772,7 @@ else {jLabel15.setText("NO");}
         Order german = new Order();
         german.setVisible(true);
         try{
-        String sql="INSERT INTO `menu` (`Sandwich`,`Meals`,`Drinks`,`Delivery`,`Total`) VALUES ('"+v1+","+v2+","+v3+"','"+v4+","+v5+","+v6+"','"+v7+","+v8+","+v9+","+v10+","+v11+","+12+"')";
+        String sql="INSERT INTO `menu` (`Sandwich`,`Meals`,`Drinks`,`Payment method`,`Delivery`,`Total`) VALUES ('"+v1+","+v2+","+v3+"','"+v4+","+v5+","+v6+"','"+v7+","+v8+","+v9+"','"+v10+"','"+v11+"','"+v12+"')";
          
                 
                 
@@ -796,6 +785,16 @@ else {jLabel15.setText("NO");}
 }
         
     }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        double  total = mi+tw+ch+zi+ch1+fi+ba+pe+up;
+        if(jCheckBox1.isSelected()
+        ){      total = mi+tw+ch+zi+ch1+fi+ba+pe+up+10;
+        }
+
+        jTextField1.setText(String.valueOf(total));
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
