@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2019 at 12:17 AM
+-- Generation Time: Apr 21, 2019 at 12:20 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -45,6 +45,22 @@ CREATE TABLE `clients data` (
 INSERT INTO `clients data` (`ID`, `Name`, `PhoneNumber`, `Email`, `Address`, `Departement`, `Floor`) VALUES
 (12, 'mohs', 1152146226, '', 'cjxj', 'ccc', 'comboBoxChanged');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu`
+--
+
+CREATE TABLE `menu` (
+  `code` int(255) NOT NULL,
+  `Sandwich` varchar(260) DEFAULT NULL,
+  `Meals` varchar(200) DEFAULT NULL,
+  `Drinks` varchar(255) DEFAULT NULL,
+  `Payment method` varchar(260) DEFAULT NULL,
+  `Delivery` varchar(255) DEFAULT NULL,
+  `Total` int(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -56,6 +72,12 @@ ALTER TABLE `clients data`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `menu`
+--
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`code`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -64,6 +86,12 @@ ALTER TABLE `clients data`
 --
 ALTER TABLE `clients data`
   MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `code` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
