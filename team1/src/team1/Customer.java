@@ -7,7 +7,9 @@ package team1;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import net.proteanit.sql.DbUtils;
 
 /**
  *
@@ -20,6 +22,8 @@ public class Customer extends javax.swing.JFrame {
      * 
      */
     Connection conn=null;
+    ResultSet rs=null;
+    PreparedStatement pst=null;
     String fullname ;
       String phone ;
        String c ;
@@ -32,6 +36,7 @@ public class Customer extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         conn=connection.getCONNECTION();
+        
         phone = x;
         jTextField2.setText(phone);
         
@@ -42,9 +47,24 @@ public class Customer extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         conn=connection.getCONNECTION();
-
+update_table();
     }
+private void update_table() {
+      try{
+          String sql ="select * from resturant";
+          pst=con.prepareStatement(sql);
+          rs=pst.executeQuery();
+          resturant_table.setModel(DbUtils.resultSetToTableModel(rs));
+      }
+      catch(Exception e){
+          JOptionPane.showMessageDialog(null, e);
+      }
+      }
 
+
+
+//To change body of generated methods, choose Tools | Templates.
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -378,4 +398,6 @@ public class Customer extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
+
+    
 }
