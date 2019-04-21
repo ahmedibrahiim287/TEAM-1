@@ -872,3 +872,7 @@ else {jLabel15.setText("NO");}
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
+
+/*String v1=jLabel5.getText();
+        String all=jLabel6.getText()+jLabel7.getText()+jLabel8.getText()+jLabel9.getText()+jLabel2.getText()+jLabel3.getText()+jLabel4.getText()+jLabel12.getText()+jLabel15.getText()+jLabel13.getText()+jTextField1.getText();
+        */
