@@ -33,6 +33,7 @@ String no;
         jTextField15.setText (Customer.add3);
         jTextField3.setText (Customer.add4);
         jTextField4.setText (Customer.add5);
+        jTextField16.setText(Customer.phone);
                 
     }
 
@@ -374,6 +375,7 @@ String no;
         t11=jTextField11.getText();
         tp=jTextField12.getText();
         no=jTextField13.getText();
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed

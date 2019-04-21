@@ -24,8 +24,8 @@ public class Customer extends javax.swing.JFrame {
     Connection conn=null;
     ResultSet rs=null;
     PreparedStatement pst=null;
-    String fullname ;
-      String phone ;
+     String fullname ;
+      public static String  phone ;
        String c ;
        String address;
        String lastorder;
@@ -67,9 +67,6 @@ if(rs.next()){
     jTextField3.setText(add4);
      add5=rs.getString("Departement");
     jTextField5.setText(add5);
-    
-    //String add6=rs.getString("Floor");
-    //Floor_txt.setText(add6);
     
  }
 }
