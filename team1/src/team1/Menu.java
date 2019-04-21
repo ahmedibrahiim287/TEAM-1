@@ -768,9 +768,11 @@ else {jLabel15.setText("NO");}
         String v10=jLabel15.getText();
         String v11=jLabel13.getText();
         String v12=jTextField1.getText();
+                String all=jLabel5.getText()+"\n"+jLabel6.getText()+"\n"+jLabel7.getText()+"\n"+jLabel8.getText()+"\n"+jLabel9.getText()+"\n"+jLabel2.getText()+"\n"+jLabel3.getText()+"\n"+jLabel4.getText()+"\n"+jLabel12.getText()+"\n"+jLabel15.getText()+"\n"+jLabel13.getText()+"\n"+jTextField1.getText();
+
         this.dispose();
-        Order german = new Order();
-        german.setVisible(true);
+        Order nextframe = new Order(all);
+        nextframe.setVisible(true);
         try{
         String sql="INSERT INTO `menu` (`Sandwich`,`Meals`,`Drinks`,`Payment method`,`Delivery`,`Total`) VALUES ('"+v1+","+v2+","+v3+"','"+v4+","+v5+","+v6+"','"+v7+","+v8+","+v9+"','"+v10+"','"+v11+"','"+v12+"')";
          
@@ -779,6 +781,7 @@ else {jLabel15.setText("NO");}
         PreparedStatement pst=conn.prepareStatement(sql);
         
         pst.execute();
+       
         JOptionPane.showMessageDialog(null,"done");
   }
         catch(Exception e){        JOptionPane.showMessageDialog(null,e);
@@ -873,6 +876,3 @@ else {jLabel15.setText("NO");}
     // End of variables declaration//GEN-END:variables
 }
 
-/*String v1=jLabel5.getText();
-        String all=jLabel6.getText()+jLabel7.getText()+jLabel8.getText()+jLabel9.getText()+jLabel2.getText()+jLabel3.getText()+jLabel4.getText()+jLabel12.getText()+jLabel15.getText()+jLabel13.getText()+jTextField1.getText();
-        */

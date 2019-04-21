@@ -26,6 +26,16 @@ String no;
     /**
      * Creates new form phoneNumber
      */
+ public Order(String x) {
+        initComponents();
+        jTextField14.setText(x);
+        jTextField1.setText(Customer.add2);
+        jTextField15.setText(Customer.add3);
+        jTextField3.setText(Customer.add4);
+        jTextField4.setText(Customer.add5);
+                
+    }
+
     public Order() {
         initComponents();
     }

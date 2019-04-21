@@ -48,7 +48,10 @@ public class Customer extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         conn=connection.getCONNECTION();
     }
-
+public static String add2;
+public String add3;
+public String add4;
+public String add5;
 private void load (){
 try{
     String sql="select * from clientsdata where PhoneNumber='"+phone+"'";
@@ -56,13 +59,13 @@ pst=conn.prepareStatement(sql);
 rs=pst.executeQuery();
 if(rs.next()){
    
-     String add2=rs.getString("Name");
+      add2=rs.getString("Name");
     jTextField1.setText(add2); 
-   String add3=rs.getString("Email");
+    add3=rs.getString("Email");
     jTextField6.setText(add3);
-     String add4=rs.getString("Address");
+      add4=rs.getString("Address");
     jTextField3.setText(add4);
-    String add5=rs.getString("Departement");
+     add5=rs.getString("Departement");
     jTextField5.setText(add5);
     
     //String add6=rs.getString("Floor");
@@ -267,8 +270,8 @@ catch(Exception e){
             String v5=jTextField6.getText();
              
         this.dispose();
-        Menu german = new Menu();
-        german.setVisible(true);
+        Menu nextframe = new Menu();
+        nextframe.setVisible(true);
         
         
         try{
