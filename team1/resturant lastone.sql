@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2019 at 01:27 AM
+-- Generation Time: Apr 21, 2019 at 03:01 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -42,7 +42,10 @@ CREATE TABLE `clientsdata` (
 --
 
 INSERT INTO `clientsdata` (`ID`, `Name`, `PhoneNumber`, `Email`, `Address`, `Departement`) VALUES
-(1, 'maher', 1152146226, 'sd', 'giza', 'as');
+(3, 'mohamed maher', 1152146226, 'gam', 'cairo', 'giz'),
+(6, 'sirag', 1099816474, 'com', 'caio', 'giza'),
+(8, 'maherr', 1222644636, 'ads', 'dsda', 'sdasd'),
+(9, 'mohamed', 142721987, 'ddd', 'maher', 'ddd');
 
 -- --------------------------------------------------------
 
@@ -65,7 +68,11 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`code`, `Sandwich`, `Meals`, `Drinks`, `Payment method`, `Delivery`, `Total`) VALUES
-(1, ',,', ',fish  150.0,', 'pepsi  5.0,,', 'Delivery  10', 'Master card', 165);
+(3, ',,Twister  10.0', ',,Barbcue  120.0', ',,mirinda  5.0', 'Delivery  10', 'Cash', 145),
+(5, ',,Twister  10.0', 'chicken  120.0,,', 'pepsi  5.0,,', 'Delivery  10', 'Cash', 145),
+(6, 'chicken  10.0,,', 'chicken  120.0,,', 'pepsi  5.0,,', 'Delivery  10', 'Cash', 145),
+(7, ',,Twister  10.0', 'chicken  120.0,,', ',7up  5.0,', 'Delivery  10', 'Cash', 145),
+(8, 'chicken  10.0,,', ',fish  150.0,Barbcue  120.0', 'pepsi  5.0,,', 'Delivery  10', 'Cash', 295);
 
 --
 -- Indexes for dumped tables
@@ -92,13 +99,13 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `clientsdata`
 --
 ALTER TABLE `clientsdata`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `code` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `code` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
