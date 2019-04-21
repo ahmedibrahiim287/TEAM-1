@@ -60,13 +60,17 @@ rs=pst.executeQuery();
 if(rs.next()){
    
       add2=rs.getString("Name");
-    jTextField1.setText(add2); 
+    jTextField1.setText(add2);
+    
     add3=rs.getString("Email");
     jTextField6.setText(add3);
+    
       add4=rs.getString("Address");
     jTextField3.setText(add4);
+    
      add5=rs.getString("Departement");
     jTextField5.setText(add5);
+    
     
  }
 }
@@ -265,6 +269,10 @@ catch(Exception e){
            String v3=jTextField3.getText();
             String v4=jTextField5.getText();
             String v5=jTextField6.getText();
+             add2= jTextField1.getText();
+             add3=jTextField6.getText();
+             add4=jTextField3.getText();
+             add5=jTextField5.getText();
              
         this.dispose();
         Menu nextframe = new Menu();
