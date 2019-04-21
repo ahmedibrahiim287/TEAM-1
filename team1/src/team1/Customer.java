@@ -49,9 +49,9 @@ public class Customer extends javax.swing.JFrame {
         conn=connection.getCONNECTION();
     }
 public static String add2;
-public String add3;
-public String add4;
-public String add5;
+public static String add3;
+public static String add4;
+public static String add5;
 private void load (){
 try{
     String sql="select * from clientsdata where PhoneNumber='"+phone+"'";
